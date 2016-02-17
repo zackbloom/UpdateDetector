@@ -1,43 +1,44 @@
-#ud-Banner {
+ud-banner {
     position: fixed;
-    top: -50px;
     left: 0px;
     width: 100%;
-    height: 50px;
-    line-height: 50px;
     text-align: center;
     z-index: 9999;
+    cursor: pointer;
+
+    -webkit-transition: top 500ms ease;
+    transition: top 500ms ease;
 }
 
-.ud-Black {
+.ud-black {
     background: rgb(0, 0, 0);
     color: #ffffff;
 }
-.ud-Black-t {
+.ud-black-t {
     background: rgba(0, 0, 0, 0.5);
     color: #ffffff;
 }
-.ud-Dark {
+.ud-dark {
     background: rgb(60, 60, 60);
     color: #ffffff;
 }
-.ud-Dark-t {
+.ud-dark-t {
     background: rgba(60, 60, 60, 0.5);
     color: #ffffff;
 }
-.ud-Light {
+.ud-light {
     background: rgb(180, 180, 180);
     color: #3b3b3b;
 }
-.ud-Light-t {
+.ud-light-t {
     background: rgba(180, 180, 180, 0.5);
     color: #3b3b3b;
 }
-.ud-White {
+.ud-white {
     background: rgb(255, 255, 255);
     color: #000000;
 }
-.ud-White-t {
+.ud-white-t {
     background: rgb(255, 255, 255, 0.5);
     color: #000000;
 }

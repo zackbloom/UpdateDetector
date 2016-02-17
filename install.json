@@ -23,21 +23,16 @@
     },
     "options": {
         "properties": {
-			"help": {
-				"type": "help",
-				"helpvalue": "This app requires jQuery to work. Make sure you have jQuery installed before adding this app.",
-				"order": 1
-			},
             "time": {
                 "title": "Refresh time",
-                "description": "How often should the app check for updates? (In seconds)",
+                "description": "How often should the app check for updates (in seconds)",
                 "type": "integer",
                 "default": 10,
                 "order": 2
             },
             "reload": {
                 "title": "Reload",
-                "description": "Reload the page when an update is detected?",
+                "description": "Automatically reload the page when an update is detected",
                 "type": "boolean",
                 "default": false,
                 "order": 3
@@ -46,35 +41,28 @@
                 "title": "Banner Settings",
                 "type": "object",
                 "properties": {
-                    "preview": {
-                        "title": "Preview Banner",
-                        "description": "Show the banner to see what it looks like. Make sure to turn this back off or the banner will always show.",
-                        "type": "boolean",
-                        "default": false,
-                        "order": 4
-                    },
                     "theme": {
                         "title": "Theme",
                         "description": "Pick a theme for the banner.",
                         "type": "string",
                         "enum": [
-                            "White",
-                            "Light",
-                            "Dark",
-                            "Black",
-                            "Custom..."
+                            "white",
+                            "light",
+                            "dark",
+                            "black",
+                            "custom"
                         ],
                         "enumNames": {
-                            "White": "White",
-                            "Light": "Light",
-                            "Dark": "Dark",
-                            "Black": "Black",
-                            "Custom...": "Custom..."
+                            "white": "White",
+                            "light": "Light",
+                            "dark": "Dark",
+                            "black": "Black",
+                            "custom": "Custom..."
                         },
-                        "default": "Light",
+                        "default": "light",
                         "order": 5
                     },
-                    "ct": {
+                    "backgroundColor": {
 						"title": "Banner Color",
 						"description": "Choose a color for the background of the banner.",
 						"type": "string",
@@ -82,10 +70,10 @@
                         "default": "#004080",
 						"order": 6,
 						"showIf": {
-							"banner.theme": "Custom..."
+							"banner.theme": "custom"
 						}
 					},
-					"tc": {
+					"textColor": {
 						"title": "Text Color",
 						"description": "Choose a color for the text on the banner.",
 						"type": "string",
@@ -93,19 +81,19 @@
                         "default": "#00ffff",
 						"order": 7,
 						"showIf": {
-							"banner.theme": "Custom..."
+							"banner.theme": "custom"
 						}
 					},
-                    "t": {
+                    "transparent": {
                         "title": "Transparent Banner",
-                        "description": "Should the background of the banner be transparent?",
+                        "description": "Show the content of the page through the banner",
                         "type": "boolean",
                         "default": false,
                         "order": 8
                     },
-                    "bh": {
+                    "height": {
                         "title": "Banner Height",
-                        "description": "How tall is the banner? (In pixels)",
+                        "description": "In pixels",
                         "type": "integer",
                         "default": 50,
                         "order": 9
@@ -117,9 +105,9 @@
                         "default": "sans-serif",
                         "order": 10
                     },
-                    "ts": {
+                    "textSize": {
                         "title": "Font Size",
-                        "description": "Size of the banner font.",
+                        "description": "In pixels",
                         "type": "integer",
                         "default": 15,
                         "order": 11
