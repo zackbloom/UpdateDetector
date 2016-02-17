@@ -63,27 +63,27 @@
                         "order": 5
                     },
                     "backgroundColor": {
-						"title": "Banner Color",
-						"description": "Choose a color for the background of the banner.",
-						"type": "string",
-						"format": "color",
+                        "title": "Banner Color",
+                        "description": "Choose a color for the background of the banner.",
+                        "type": "string",
+                        "format": "color",
                         "default": "#004080",
-						"order": 6,
-						"showIf": {
-							"banner.theme": "custom"
-						}
-					},
-					"textColor": {
-						"title": "Text Color",
-						"description": "Choose a color for the text on the banner.",
-						"type": "string",
-						"format": "color",
+                        "order": 6,
+                        "showIf": {
+                            "banner.theme": "custom"
+                        }
+                    },
+                    "textColor": {
+                        "title": "Text Color",
+                        "description": "Choose a color for the text on the banner.",
+                        "type": "string",
+                        "format": "color",
                         "default": "#00ffff",
-						"order": 7,
-						"showIf": {
-							"banner.theme": "custom"
-						}
-					},
+                        "order": 7,
+                        "showIf": {
+                            "banner.theme": "custom"
+                        }
+                    },
                     "transparent": {
                         "title": "Transparent Banner",
                         "description": "Show the content of the page through the banner",
