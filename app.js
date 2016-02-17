@@ -81,7 +81,6 @@
         } else {
             banner.className += ' ud-' + options.banner.theme + (options.banner.transparent ? '-t' : '');
         }
-        console.log(bgColor, textColor);
 
         styleEl.innerHTML = 'ud-banner {' +
             'background-color: ' + bgColor + ';' +
