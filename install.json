@@ -1,0 +1,141 @@
+{
+    "resources": {
+        "head": [
+            {
+                "type": "style",
+                "src": "./app.css"
+            }
+        ],
+        "body": [
+            {
+                "type": "script",
+                "src": "./app.js"
+            }
+        ]
+    },
+    "preview": {
+        "handlers": [
+            {
+                "options": ["*"],
+                "execute": "UpdateDetector.setOptions(INSTALL_OPTIONS)"
+            }
+        ]
+    },
+    "options": {
+        "properties": {
+			"help": {
+				"type": "help",
+				"helpvalue": "This app requires jQuery to work. Make sure you have jQuery installed before adding this app.",
+				"order": 1
+			},
+            "time": {
+                "title": "Refresh time",
+                "description": "How often should the app check for updates? (In seconds)",
+                "type": "integer",
+                "default": 10,
+                "order": 2
+            },
+            "reload": {
+                "title": "Reload",
+                "description": "Reload the page when an update is detected?",
+                "type": "boolean",
+                "default": false,
+                "order": 3
+            },
+            "banner": {
+                "title": "Banner Settings",
+                "type": "object",
+                "properties": {
+                    "preview": {
+                        "title": "Preview Banner",
+                        "description": "Show the banner to see what it looks like. Make sure to turn this back off or the banner will always show.",
+                        "type": "boolean",
+                        "default": false,
+                        "order": 4
+                    },
+                    "theme": {
+                        "title": "Theme",
+                        "description": "Pick a theme for the banner.",
+                        "type": "string",
+                        "enum": [
+                            "White",
+                            "Light",
+                            "Dark",
+                            "Black",
+                            "Custom..."
+                        ],
+                        "enumNames": {
+                            "White": "White",
+                            "Light": "Light",
+                            "Dark": "Dark",
+                            "Black": "Black",
+                            "Custom...": "Custom..."
+                        },
+                        "default": "Light",
+                        "order": 5
+                    },
+                    "ct": {
+						"title": "Banner Color",
+						"description": "Choose a color for the background of the banner.",
+						"type": "string",
+						"format": "color",
+                        "default": "#004080",
+						"order": 6,
+						"showIf": {
+							"banner.theme": "Custom..."
+						}
+					},
+					"tc": {
+						"title": "Text Color",
+						"description": "Choose a color for the text on the banner.",
+						"type": "string",
+						"format": "color",
+                        "default": "#00ffff",
+						"order": 7,
+						"showIf": {
+							"banner.theme": "Custom..."
+						}
+					},
+                    "t": {
+                        "title": "Transparent Banner",
+                        "description": "Should the background of the banner be transparent?",
+                        "type": "boolean",
+                        "default": false,
+                        "order": 8
+                    },
+                    "bh": {
+                        "title": "Banner Height",
+                        "description": "How tall is the banner? (In pixels)",
+                        "type": "integer",
+                        "default": 50,
+                        "order": 9
+                    },
+                    "font": {
+                        "title": "Banner Font",
+                        "description": "Font to use on the banner.",
+                        "type": "string",
+                        "default": "sans-serif",
+                        "order": 10
+                    },
+                    "ts": {
+                        "title": "Font Size",
+                        "description": "Size of the banner font.",
+                        "type": "integer",
+                        "default": 15,
+                        "order": 11
+                    },
+                    "text": {
+                        "title": "Banner Text",
+                        "description": "What text to display on the banner?",
+                        "type": "string",
+                        "default": "This page has been updated. Reload to see the new version.",
+                        "order": 12
+                    }
+                },
+                "showIf": {
+                    "reload": false
+                }
+            }
+        }
+    }
+}
